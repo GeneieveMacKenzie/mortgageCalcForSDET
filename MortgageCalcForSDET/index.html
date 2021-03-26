@@ -7,28 +7,28 @@
 <body>
     <div id="app">
         <div class="banner">
-            <h3>Mortgage Calculator</h3>
+            <h3 id="headText">Mortgage Calculator</h3>
         </div>
     </div>
     <script src="calculate.js"></script>
-    <form>
-        <label for="amount" onchange="handle_click()">Amount:</label><br>
-        <input type="text" id="amount" name="amount"><br>
+    <form class="main">
+        <label for="amount" >Amount:</label><br>
+        <input type="text" id="amount" name="amount" oninput="handle_click()"><br>
         <label for="interest">Interest Rate:</label><br>
-        <input type="text" id="interest" name="interest" onchange="handle_click()"><br>
+        <input type="text" id="interest" name="interest" oninput="handle_click()"><br>
 
         <label for="term">Term:</label><br>
-        <select id="term">
+        <select id="term" onclick="handle_click()">
             <option value=15>15 Year</option>
             <option value=30>30 Year</option>
         </select><br>
         <input type="button" value="Calculate" onclick="handle_click()"><br>
 
         <hr>
-        <p> Balance: $ <span style="float : inline-start;" id="renderBalance">0</span> </p>
+        <p> Balance: $ <span id="renderBalance">0</span> </p>
         <hr>
         <hr>
-        <p> Payment: $ <span style="float : inline-start;" id="renderPayment">0</span> </p>
+        <p> Payment: $ <span id="renderPayment">0</span> </p>
         <hr>
 
     </form>
